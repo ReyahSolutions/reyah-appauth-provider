@@ -1,5 +1,5 @@
-# Reyah OAuth2 provider
-Reyah OAuth2 provider for web and Node.js written in TypeScript
+# Reyah app auth provider
+Reyah app auth provider for web and Node.js written in TypeScript
 
 ## Compile
 This project use typescript
