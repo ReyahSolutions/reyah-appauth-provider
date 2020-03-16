@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true
+    },
+    "extends": ["airbnb-typescript/base"],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "@typescript-eslint/indent": ["error", 4],
+        "lines-between-class-members": "off",
+        "linebreak-style": "off",
+        "max-len": "off",
+        "import/no-cycle": "off",
+        "import/order": "error",
+        "max-classes-per-file": "off",
+        "no-await-in-loop": "off",
+        "class-methods-use-this": "off",
+        "import/no-extraneous-dependencies": "off"
+    }
+}
