@@ -1,6 +1,6 @@
 {
   "name": "@reyah/app-auth-provider",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Reyah SDK application authentication provider",
   "main": "dist/bundle.min.js",
   "types": "dist/index.d.ts",
@@ -42,6 +42,6 @@
     "node-localstorage": "^2.1.5",
     "process": "^0.11.10",
     "qs": "^6.9.1",
-    "@reyah/api-sdk": "^1.0.0"
+    "@reyah/api-sdk": "*"
   }
 }
