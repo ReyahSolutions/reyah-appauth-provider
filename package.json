@@ -17,6 +17,10 @@
     "url": "git@git.reyah.ga:reyah/libraries/reyah-oauth-provider.git"
   },
   "author": "Arthur Knoepflin <arthur@reyah.eu>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
   "license": "ISC",
   "devDependencies": {
     "@types/events": "^3.0.0",
