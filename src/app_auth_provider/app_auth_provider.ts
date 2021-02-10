@@ -5,6 +5,7 @@ import {
     NotAuthenticatedException,
     CannotRefreshSessionException,
     ReyahRequest,
+    ReyahRequestError,
 } from '@reyah/api-sdk';
 
 import {
@@ -139,7 +140,7 @@ export class AppAuthProvider implements AuthProvider {
         if (typeof queryParam.error === 'undefined') {
             return false;
         }
-        throw new AuthorizationException(queryParam.error, queryParam.error_description, queryParam.error_hint);
+        throw new AuthorizationException(queryParam.error.toString(), queryParam.error_description?.toString() || '', queryParam.error_hint?.toString() || '');
     }
 
     public makeAuthorizeRequest(params?: MakeAuthorizeParam): void {
@@ -351,7 +352,7 @@ export class AppAuthProvider implements AuthProvider {
             throw new NotAuthenticatedException();
         }
         let token: TokenResponse;
-        if (typeof ctx.lastError !== 'undefined' && ctx.lastError instanceof AuthenticationException) {
+        if (ctx.lastError !== undefined && ctx.lastError instanceof ReyahRequestError && ctx.lastError.isReyahRequestError && ctx.lastError.code === 401) {
             token = await this.refreshToken();
         } else {
             token = await this.getFreshToken();
