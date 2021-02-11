@@ -4,6 +4,9 @@
   "description": "Reyah SDK application authentication provider",
   "main": "dist/bundle.min.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "node dist/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
